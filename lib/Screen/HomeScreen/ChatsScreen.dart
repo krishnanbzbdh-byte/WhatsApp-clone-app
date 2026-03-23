@@ -116,6 +116,11 @@ class ChatsScreen extends StatelessWidget {
           ),
         ],
       ),
+      floatingActionButton: CircleAvatar(
+        radius: 30,
+        backgroundColor: Color(0xff008665),
+        child: Image.asset('assets/icon.png'),
+      ),
     );
   }
 }

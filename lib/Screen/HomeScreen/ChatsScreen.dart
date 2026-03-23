@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:whatshap_app_project/Screen/HomeScreen/ContactScreen.dart';
 import 'package:whatshap_app_project/Widgets/UI_helper.dart';
 
 class ChatsScreen extends StatelessWidget {
@@ -56,7 +57,7 @@ class ChatsScreen extends StatelessWidget {
     {
       "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwIyQ53XuvvuT_-CrAXw3pjzsgruMtZP2yIA&s",
       "name": "MY Friend",
-      "lastmsg": "bak bskd",
+      "lastmsg": "photo bhej do yr ",
       "time": "05:01 pm",
       "msg": "1",
     },
@@ -116,10 +117,15 @@ class ChatsScreen extends StatelessWidget {
           ),
         ],
       ),
-      floatingActionButton: CircleAvatar(
-        radius: 30,
-        backgroundColor: Color(0xff008665),
-        child: Image.asset('assets/icon.png'),
+      floatingActionButton: GestureDetector(
+        onTap:(){
+          Navigator.push(context, MaterialPageRoute(builder: (context) => Contactscreen(),));
+        },
+        child: CircleAvatar(
+          radius: 30,
+          backgroundColor: Color(0xff008665),
+          child: Image.asset('assets/icon.png'),
+        ),
       ),
     );
   }

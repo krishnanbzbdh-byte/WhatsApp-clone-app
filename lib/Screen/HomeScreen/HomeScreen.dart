@@ -26,7 +26,12 @@ class Homescreen extends StatelessWidget{
           actions: [
             Padding(
               padding: const EdgeInsets.only(right: 20),
-              child: IconButton(onPressed: (){}, icon:Image.asset('assets/Search.png')),
+              child: Row(
+                children: [
+                  IconButton(onPressed: (){}, icon:Image.asset('assets/Search.png')),
+                  IconButton(onPressed: (){}, icon: Icon(Icons.more_vert_sharp,color: Colors.white,)),
+                ],
+              ),
             ),
           ],
         ),

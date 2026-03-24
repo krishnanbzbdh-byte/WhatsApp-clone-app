@@ -1,23 +1,50 @@
 
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:whatshap_app_project/Screen/HomeScreen/HomeScreen.dart';
 import 'package:whatshap_app_project/Screen/OnBordingScreen.dart';
 import 'package:whatshap_app_project/Widgets/UI_helper.dart';
 
 class Splashscreen extends StatefulWidget {
   @override
-  State<Splashscreen> createState() => _SplashscreenState();
+  State<Splashscreen> createState() => SplashscreenState();
 }
 
-class _SplashscreenState extends State<Splashscreen> {
+class SplashscreenState extends State<Splashscreen> {
   @override
+  static const String Keylogin = "login";
   void initState() {
     super.initState();
-    _navigation();
+    navigation();
   }
-  _navigation() async{
-    await Future.delayed(Duration(seconds: 2), (){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Onbordingscreen(), ));
-    });
+  navigation() async{
+    var sharedpref = await SharedPreferences.getInstance();
+    var isLogin = sharedpref.getBool(Keylogin);
+    await Future.delayed(Duration(milliseconds: 3000), () {
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => Onbordingscreen(),));
+
+      if (isLogin != null) {
+        if (isLogin) {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) =>Homescreen()),
+          );
+        } else {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => Onbordingscreen()),
+          );
+        }
+      } else {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) =>Onbordingscreen()),
+        );
+      }
+    }
+    );
+
   }
   @override
   Widget build(BuildContext context) {

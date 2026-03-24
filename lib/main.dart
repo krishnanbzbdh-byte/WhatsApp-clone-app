@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
         fontFamily: "Regular"
       ),
-      home:Homescreen(),
+      home:Splashscreen(),
       debugShowCheckedModeBanner: false
     );
   }

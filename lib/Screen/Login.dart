@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:whatshap_app_project/Screen/HomeScreen/HomeScreen.dart';
 import 'package:whatshap_app_project/Screen/OTPScreen.dart';
+import 'package:whatshap_app_project/Screen/SplashScreen.dart';
 import 'package:whatshap_app_project/Widgets/UI_helper.dart';
 
 class Login extends StatefulWidget {
@@ -129,12 +132,15 @@ class _LoginState extends State<Login> {
     );
   }
 
-  login(String phonenumber) {
+  login(String phonenumber) async{
     if (phonenumber == "") {
       return ScaffoldMessenger.of(
         context,
       ).showSnackBar(SnackBar(content: Text("Enter phone number"),backgroundColor: Colors.green,));
     } else {
+      //If succes fully login
+      var sharedpref = await SharedPreferences.getInstance();
+      sharedpref.setBool(SplashscreenState.Keylogin, true);
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => Otpscreen(Contact: "$phonenumber",)),

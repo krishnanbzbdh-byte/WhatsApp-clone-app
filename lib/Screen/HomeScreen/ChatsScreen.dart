@@ -15,7 +15,7 @@ class ChatsScreen extends StatelessWidget {
     {
       "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwIyQ53XuvvuT_-CrAXw3pjzsgruMtZP2yIA&s",
       "name": "MY Friend",
-      "lastmsg": "bak bskd",
+      "lastmsg": "photo bhejo yr",
       "time": "05:01 pm",
       "msg": "1",
     },
@@ -29,7 +29,7 @@ class ChatsScreen extends StatelessWidget {
     {
       "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwIyQ53XuvvuT_-CrAXw3pjzsgruMtZP2yIA&s",
       "name": "MY Friend",
-      "lastmsg": "bak bskd",
+      "lastmsg": "photo bhejo yr",
       "time": "05:01 pm",
       "msg": "1",
     },
@@ -43,7 +43,7 @@ class ChatsScreen extends StatelessWidget {
     {
       "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwIyQ53XuvvuT_-CrAXw3pjzsgruMtZP2yIA&s",
       "name": "MY Friend",
-      "lastmsg": "bak bskd",
+      "lastmsg": "photo bhejo yr",
       "time": "05:01 pm",
       "msg": "1",
     },
@@ -57,7 +57,7 @@ class ChatsScreen extends StatelessWidget {
     {
       "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwIyQ53XuvvuT_-CrAXw3pjzsgruMtZP2yIA&s",
       "name": "MY Friend",
-      "lastmsg": "photo bhej do yr ",
+      "lastmsg": "Photo bhejo yr ",
       "time": "05:01 pm",
       "msg": "1",
     },
